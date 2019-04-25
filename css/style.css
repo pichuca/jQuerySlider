@@ -40,41 +40,28 @@ h1 {
     display: inline-block;
 }
 
+/* Slider arrows styles */
 .arrow {
-    width: 80px;
-    height: 80px;
-    font-size: 78px;
-    z-index: 100;
+    width: 48px;
+    height: 48px;
+    border-color: #000;
     position: absolute;
-    float: left;
+    top: 50%;
+    margin: -31px 10px 10px;
     cursor: pointer;
-    color: red;
-    top: calc(50%);
-    background: gray;
-    border-radius: 50%;
-    opacity: 0.3;
-}
-
-.arrow:hover {
-    opacity: 0.8; 
-}
-
-.arrow.prev:after {
-    content: '<';
-}
-
-.arrow.next:after {
-    content: '>';
-}
-
-.next {
-    margin-right: -45px;
 }
 
 .prev {
-    margin-left: -45px;
+    border-bottom: 6px solid;
+    border-left: 6px solid;
+    transform: rotate(45deg);
+    left: 10px;
 }
 
-.slider-inner-div img {
-    background: red;
+.next {
+    border-bottom: 6px solid;
+    border-left: 6px solid;
+    transform: rotate(-135deg);
+    right: 10px;
 }
+/* END Slider arrows styles */
