@@ -7,8 +7,10 @@ $(document).ready(function() {
         if (nextImg.length) {
             currentImg.removeClass('active').css('z-index', -10);
             nextImg.addClass('active').css('z-index', 10);
-        } else {
-            console.log('No next image');
+            if (nextImg.length ===  nextImg.length - 1) {
+                currentImg.removeClass('active');
+                $('.slider-inner img').first().addClass('.active');
+            }
         }
     });
     $('.prev').on('click', function() {
@@ -19,10 +21,7 @@ $(document).ready(function() {
         if (prevImg.length) {
             currentImg.removeClass('active').css('z-index', -10);
             prevImg.addClass('active').css('z-index', 10);
-        } else {
-            console.log('No prev image');
         }
     });
-    // TODO: when it gets to last image, re start
-
+    // TODO: make it loopable
 });
